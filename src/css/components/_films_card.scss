@@ -1,0 +1,86 @@
+.films__card {
+  border-bottom: 0.1rem solid $color-white;
+  cursor: pointer;
+  padding: 2.2rem 0;
+  position: relative;
+
+  &:first-child {
+    border-top: 0.1rem solid $color-white;
+  }
+
+  // &:hover {
+  //   cursor: none;
+  // }
+}
+
+.films__card__wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.films__card__category {
+  @extend %description-18;
+
+  text-transform: uppercase;
+}
+
+.films__card__date {
+  @extend %description-18;
+
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.films__card__title {
+  @extend %title-60;
+
+  color: $color-ripe-lemon;
+  margin: 7.4rem 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+.films__card__producer {
+  @extend %description-18;
+
+  text-transform: uppercase;
+
+  span {
+    opacity: 0.5;
+  }
+}
+
+.films__card__director {
+  @extend %description-18;
+
+  text-transform: uppercase;
+
+  span {
+    opacity: 0.5;
+  }
+}
+
+.films__card__media {
+  height: 34.4rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-20deg);
+  transform-origin: center;
+  overflow: hidden;
+  width: 23rem;
+  opacity: 0;
+  visibily: hidden;
+  pointer-events: none;
+}
+
+.films__card__media__image {
+  @extend %cover;
+
+  transition: all $smooth-transition 0.6s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}

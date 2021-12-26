@@ -1,0 +1,25 @@
+.navigation {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 3rem;
+}
+
+.navigation__wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5rem 0;
+  width: 100%;
+}
+
+.navigation__link {
+  @extend %description-30;
+}
+
+.navigation__line {
+  background: $color-white;
+  height: 0.1rem;
+  width: 100%;
+}

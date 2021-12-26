@@ -1,0 +1,41 @@
+.hero {
+  padding: 7.4rem 3rem 0;
+}
+
+.hero__title {
+  @extend %title-200;
+
+  font-weight: bold;
+  text-align: center;
+}
+
+.hero__line {
+  background-color: $color-white;
+  display: block;
+  margin: 7.4rem 0 2.5rem;
+  height: 0.1rem;
+  width: 100%;
+}
+
+.hero__info {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero__info__label {
+  @extend %description-18;
+
+  text-transform: uppercase;
+}
+
+.hero__media {
+  height: 69.4rem;
+  margin: 9.2rem auto;
+  position: relative;
+  width: 48.9rem;
+}
+
+.hero__media__figure {
+  @extend %cover;
+}

@@ -1,0 +1,20 @@
+$color-black: #0d0d0d;
+$color-white: #ffffff;
+$color-ripe-lemon: #f7eb1f;
+
+$font-neue-montreal: "Neue Montreal";
+
+$ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+$smooth-transition: cubic-bezier(0.77, 0, 0.175, 1);
+
+// TOP +
+// BOTTOM -
+$z-indexes: (
+  "noscript",
+  "preloader",
+  "dropdown",
+  "navigationMobile",
+  "content",
+  "navigation",
+  "canvas"
+);

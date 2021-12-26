@@ -1,0 +1,19 @@
+.footer {
+  @extend %description-18;
+
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 12.8rem 0 4rem;
+  padding: 3rem;
+  width: 100%;
+}
+
+.footer__author {
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.footer__label {
+  text-transform: uppercase;
+}

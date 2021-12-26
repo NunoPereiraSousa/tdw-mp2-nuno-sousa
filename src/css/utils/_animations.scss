@@ -1,0 +1,11 @@
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes autoscroll {
+  to {
+    margin-top: -50000px;
+  }
+}
