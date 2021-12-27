@@ -6,6 +6,7 @@ import FilmsCard from "../components/films/filmCard";
 import Footer from "../components/footer/footer";
 import Header from "../components/headers/header";
 import Subheader from "../components/headers/subheader";
+import SkeletonLoading from "../components/loading/SkeletonLoading";
 // import Component from "../classes/Component";
 import { useEffect } from "react";
 // import gsap from "gsap";
@@ -57,8 +58,24 @@ export default function Home() {
     dispatch(getAllFilms());
   }, []);
 
-  // if (loading === "pending" || loading === "idle") return "Loading...";
-  if (films.loading === "rejected") return "Error!";
+  const html = _ => {
+    if (films.loading === "rejected") return "Error!";
+    if (films.loading === "pending") {
+      return [1, 2, 3, 4, 5, 6].map(item => <SkeletonLoading key={item} />);
+    }
+    if (films.loading === "fulfilled") {
+      return films.films.map(film => (
+        <FilmsCard
+          key={film.episode_id}
+          id={film.episode_id}
+          title={film.title}
+          date={film.release_date}
+          director={film.director}
+          producer={film.producer}
+        />
+      ));
+    }
+  };
 
   return (
     <>
@@ -103,17 +120,7 @@ export default function Home() {
       </section>
 
       <section className="home__films">
-        <div className="home__films__grid">
-          {films.films.map(film => (
-            <FilmsCard
-              key={film.episode_id}
-              title={film.title}
-              date={film.release_date}
-              director={film.director}
-              producer={film.producer}
-            />
-          ))}
-        </div>
+        <div className="home__films__grid">{html()}</div>
       </section>
 
       <Footer />

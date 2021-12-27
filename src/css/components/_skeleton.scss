@@ -1,0 +1,46 @@
+.skeleton {
+  border-radius: 0.2rem;
+  padding: 2.2rem 0;
+}
+
+.skeleton__shiner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba($color: $color-ripe-lemon, $alpha: 1);
+  height: 100%;
+  width: 40%;
+  transform: skew(-20deg);
+  animation: loading 1.5s linear infinite;
+}
+
+.skeleton__wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.skeleton__text {
+  background-color: rgba($color: $color-ripe-lemon, $alpha: 0.7);
+  height: 2.2rem;
+  width: 11.4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton__title {
+  background-color: rgba($color: $color-ripe-lemon, $alpha: 0.7);
+  height: 6.3rem;
+  width: 78.3rem;
+  margin: 7.4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton__labels {
+  background-color: rgba($color: $color-ripe-lemon, $alpha: 0.7);
+  height: 2.2rem;
+  width: 38.4rem;
+  position: relative;
+  overflow: hidden;
+}
