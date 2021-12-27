@@ -2,23 +2,33 @@
   padding: 9.2rem 3rem;
   position: relative;
   height: 100vh;
+
+  @include media("<phone") {
+    padding: 4rem 2rem 0;
+  }
 }
 
 .about__hide {
-  // margin: auto;
-  // position: relative;
   transform: perspective(30rem) rotateX(4deg);
   overflow: hidden;
-  height: 80vh;
+  height: 90vh;
   margin: 0 3rem;
+
+  @include media("<phone") {
+    margin: 0;
+  }
 }
 
 .about__desc {
   @extend %description-30;
 
   animation: autoscroll 2000s linear;
-  // padding-top: 3500px;
   color: $color-ripe-lemon;
   line-height: 1.35;
   text-align: center;
+
+  @include media("<phone") {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
 }

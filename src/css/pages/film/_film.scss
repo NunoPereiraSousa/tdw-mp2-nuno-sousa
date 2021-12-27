@@ -1,0 +1,206 @@
+.film {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  padding: 7rem 3rem;
+
+  @include media("<=tablet") {
+    grid-template-columns: 1fr;
+    padding: 5rem 2rem;
+  }
+
+  @include media("<phone") {
+    grid-template-columns: 1fr;
+    padding: 3rem 2rem;
+  }
+}
+
+.films__media {
+  height: 40.6rem;
+  position: relative;
+  width: 27.2rem;
+
+  @include media("<phone") {
+    height: 52.2rem;
+    width: 100%;
+  }
+}
+
+.films__media__image {
+  @extend %cover;
+}
+
+.films__info {
+  margin-left: 7.5rem;
+
+  @include media("<=tablet") {
+    margin-left: 0;
+    margin-top: 4rem;
+  }
+
+  @include media("<phone") {
+    margin-top: 3rem;
+  }
+}
+
+.films__info__header {
+  @extend %title-60;
+
+  color: $color-ripe-lemon;
+  margin-bottom: 6rem;
+
+  @include media("<=tablet") {
+    margin-bottom: 3rem;
+  }
+
+  @include media("<phone") {
+    margin-bottom: 2rem;
+  }
+}
+
+.films__info__crawl {
+  @extend %description-24;
+
+  font-weight: 400;
+  line-height: 4rem;
+  width: 85%;
+
+  span {
+    opacity: 0.5;
+  }
+
+  @include media("<=tablet") {
+    width: 100%;
+  }
+
+  @include media("<phone") {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+}
+
+.film__details {
+  padding: 0 3rem;
+}
+
+.film__details__line {
+  background-color: $color-white;
+  display: block;
+  height: 0.1rem;
+  margin-bottom: 7rem;
+  width: 100%;
+}
+
+.film__details__producers {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10vw;
+
+  @include media("<=tablet") {
+    grid-template-columns: 1fr;
+    row-gap: 8rem;
+  }
+
+  @include media("<phone") {
+    row-gap: 6rem;
+  }
+}
+
+.film__details__producers__wrapper {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+
+  @include media("<=tablet") {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+}
+
+.film__details__producers__box {
+  display: flex;
+  flex-direction: column;
+}
+
+.film__details__producers__header {
+  @extend %description-24;
+
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+.film__details__producers__desc {
+  @extend %description-18;
+
+  line-height: 2.8rem;
+  margin-top: 2rem;
+
+  @include media("<=tablet") {
+    margin-top: 1rem;
+  }
+}
+
+.film__details__producers__button {
+  @extend %description-16;
+
+  background-color: transparent;
+  border: 0.1rem solid $color-white;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  letter-spacing: 0.05rem;
+  font-weight: 400;
+  padding: 1.5rem 3rem;
+  margin-top: auto;
+  transition: all ease 0.2s;
+  text-transform: uppercase;
+  width: fit-content;
+
+  &:hover {
+    background-color: $color-ripe-lemon;
+    border: 0.1rem solid $color-ripe-lemon;
+    color: $color-black;
+  }
+
+  @include media("<=tablet") {
+    margin-top: 2rem;
+  }
+
+  @include media("<phone") {
+    text-transform: capitalize;
+  }
+}
+
+.film__details__media {
+  height: 40.6rem;
+  margin-right: 4rem;
+  position: relative;
+  width: 27.2rem;
+
+  @include media("<phone") {
+    height: 30rem;
+    width: 100%;
+  }
+}
+
+.film__details__media__image {
+  @extend %cover;
+}
+
+.film__details__card {
+  border-top: 0.1rem solid $color-white;
+  display: flex;
+  justify-content: space-between;
+  padding: 2.2rem 0;
+
+  &:last-child {
+    border-bottom: 0.1rem solid $color-white;
+  }
+}
+
+.film__details__card__label {
+  @extend %description-18;
+
+  text-transform: uppercase;
+
+  span {
+    opacity: 0.5;
+  }
+}

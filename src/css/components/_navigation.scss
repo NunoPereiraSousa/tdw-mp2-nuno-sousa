@@ -4,6 +4,11 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 0 3rem;
+  width: 100%;
+
+  @include media("<=tablet") {
+    padding: 0 2rem;
+  }
 }
 
 .navigation__wrapper {
@@ -16,6 +21,10 @@
 
 .navigation__link {
   @extend %description-30;
+
+  &:hover {
+    color: $color-ripe-lemon;
+  }
 }
 
 .navigation__line {

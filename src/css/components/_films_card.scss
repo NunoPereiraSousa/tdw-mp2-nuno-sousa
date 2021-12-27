@@ -23,6 +23,10 @@
   @extend %description-18;
 
   text-transform: uppercase;
+
+  @include media("<phone") {
+    font-size: 1.5rem;
+  }
 }
 
 .films__card__date {
@@ -30,6 +34,10 @@
 
   font-style: italic;
   text-transform: uppercase;
+
+  @include media("<phone") {
+    font-size: 1.5rem;
+  }
 }
 
 .films__card__title {
@@ -39,6 +47,10 @@
   margin: 7.4rem 0;
   text-align: center;
   font-weight: 500;
+
+  @include media("<phone") {
+    margin: 4.5rem 0;
+  }
 }
 
 .films__card__producer {
@@ -49,6 +61,10 @@
   span {
     opacity: 0.5;
   }
+
+  @include media("<phone") {
+    font-size: 1.5rem;
+  }
 }
 
 .films__card__director {
@@ -58,6 +74,10 @@
 
   span {
     opacity: 0.5;
+  }
+
+  @include media("<phone") {
+    font-size: 1.5rem;
   }
 }
 
