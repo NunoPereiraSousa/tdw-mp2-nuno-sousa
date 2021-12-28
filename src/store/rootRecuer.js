@@ -1,12 +1,12 @@
 import { combineReducers } from "redux";
 import filmsReducer from "./slice/starWarsSlice";
 import filmReducer from "./slice/filmSlice";
-import planetReducer from "./slice/planetSlice";
+import planetsReducer from "./slice/planetSlice";
 
 const rootReducer = combineReducers({
   films: filmsReducer,
   film: filmReducer,
-  planet: planetReducer
+  planets: planetsReducer
 });
 
 export default rootReducer;

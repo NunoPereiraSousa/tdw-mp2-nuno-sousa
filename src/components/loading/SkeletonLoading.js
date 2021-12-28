@@ -1,6 +1,4 @@
-const SkeletonLoading = ({ type }) => {
-  const classes = `skeleton ${type}`;
-
+const SkeletonLoading = () => {
   return (
     <div className="skeleton">
       <div className="skeleton__wrapper">

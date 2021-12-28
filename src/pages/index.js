@@ -8,11 +8,11 @@ import Header from "../components/headers/header";
 import Subheader from "../components/headers/subheader";
 import SkeletonLoading from "../components/loading/SkeletonLoading";
 // import Component from "../classes/Component";
-import { useEffect } from "react";
 // import gsap from "gsap";
 // import { SplitText } from "../utils/SplitText";
 // import { calculate, split } from "../utils/text";
 // import { each, forEach } from "lodash";
+import { useEffect } from "react";
 import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import { getAllFilms } from "../store/slice/starWarsSlice";
 

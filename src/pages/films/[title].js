@@ -65,7 +65,7 @@ const FilmDetails = _ => {
             </figure>
             <div className="film__details__producers__box">
               <h4 className="film__details__producers__header">
-                Rick McCallum
+                {data.producer}
               </h4>
               <p className="film__details__producers__desc">
                 Richard McCallum (born August 22, 1954) is an American film
@@ -77,9 +77,7 @@ const FilmDetails = _ => {
                 Dennis Potter.
               </p>
 
-              <button className="film__details__producers__button">
-                Read more
-              </button>
+              <a className="film__details__producers__button">Read more</a>
             </div>
           </div>
 
@@ -94,7 +92,7 @@ const FilmDetails = _ => {
 
             <div className="film__details__producers__box">
               <h4 className="film__details__producers__header">
-                Rick McCallum
+                {data.producer}
               </h4>
               <p className="film__details__producers__desc">
                 Richard McCallum (born August 22, 1954) is an American film
@@ -106,9 +104,9 @@ const FilmDetails = _ => {
                 Dennis Potter.
               </p>
 
-              <button className="film__details__producers__button">
+              <a href="" className="film__details__producers__button">
                 Read more
-              </button>
+              </a>
             </div>
           </div>
         </div>

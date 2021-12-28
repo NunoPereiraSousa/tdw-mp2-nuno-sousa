@@ -7,7 +7,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  background-color: rgba($color: $color-ripe-lemon, $alpha: 1);
+  background-color: rgba($color: $color-ripe-lemon, $alpha: 0.2);
   height: 100%;
   width: 40%;
   transform: skew(-20deg);
@@ -21,7 +21,7 @@
 }
 
 .skeleton__text {
-  background-color: rgba($color: $color-ripe-lemon, $alpha: 0.7);
+  background-color: rgba($color: $color-ripe-lemon, $alpha: 0.05);
   height: 2.2rem;
   width: 11.4rem;
   position: relative;
@@ -29,7 +29,7 @@
 }
 
 .skeleton__title {
-  background-color: rgba($color: $color-ripe-lemon, $alpha: 0.7);
+  background-color: rgba($color: $color-ripe-lemon, $alpha: 0.05);
   height: 6.3rem;
   width: 78.3rem;
   margin: 7.4rem 0;
@@ -38,9 +38,31 @@
 }
 
 .skeleton__labels {
-  background-color: rgba($color: $color-ripe-lemon, $alpha: 0.7);
+  background-color: rgba($color: $color-ripe-lemon, $alpha: 0.05);
   height: 2.2rem;
   width: 38.4rem;
   position: relative;
+  overflow: hidden;
+}
+
+.planets__skeleton {
+  border-radius: 0.2rem;
+  padding: 3rem 0;
+}
+
+.planets__skeleton__header {
+  background-color: rgba($color: $color-ripe-lemon, $alpha: 0.05);
+  height: 2.2rem;
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+  width: 8.5vw;
+}
+
+.planets__skeleton__label {
+  background-color: rgba($color: $color-ripe-lemon, $alpha: 0.05);
+  position: relative;
+  height: 2.2rem;
+  width: 10vw;
   overflow: hidden;
 }

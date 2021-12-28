@@ -10,6 +10,9 @@ const Navigation = _ => {
         <Link href="/films" passHref>
           <a className="navigation__link">Films</a>
         </Link>
+        <Link href="/planets" passHref>
+          <a className="navigation__link">Planets</a>
+        </Link>
         <Link href="/about" passHref>
           <a className="navigation__link">About</a>
         </Link>
