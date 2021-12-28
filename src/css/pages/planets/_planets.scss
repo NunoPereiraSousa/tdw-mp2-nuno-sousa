@@ -1,0 +1,37 @@
+.planets {
+  padding: 7.4rem 3rem 0;
+
+  @include media("<=tablet") {
+    padding: 0 2rem;
+  }
+}
+
+.planets__grid {
+  display: grid;
+  // grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+}
+
+.planets__grid__wrapper {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: auto;
+}
+
+.planets__grid__card {
+  border-bottom: 0.1rem solid $color-white;
+  padding: 3rem 0;
+}
+
+.planets__grid__card__header {
+  @extend %description-24;
+
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.planets__grid__card__label {
+  @extend %description-18;
+
+  text-transform: capitalize;
+}

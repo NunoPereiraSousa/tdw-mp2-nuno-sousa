@@ -1,0 +1,24 @@
+%title-60 {
+  font-size: 6rem;
+  font-weight: 500;
+
+  @include media("<phone") {
+    font-size: 3rem;
+  }
+}
+
+%title-200 {
+  font-size: 20rem;
+
+  @include media("<=large") {
+    font-size: 18rem;
+  }
+
+  @include media("<=tablet") {
+    font-size: 10rem;
+  }
+
+  @include media("<phone") {
+    font-size: 4rem;
+  }
+}

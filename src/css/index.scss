@@ -1,0 +1,28 @@
+@import "./base/_reset";
+
+@import "./utils/_variables";
+@import "./utils/_functions";
+@import "./utils/_mixins";
+@import "./utils/_responsive";
+@import "./utils/_vendors";
+@import "./utils/_animations";
+
+@import "./typography/_descriptions";
+@import "./typography/_titles";
+
+@import "./base/_fonts";
+@import "./base/_base";
+
+@import "./components/_navigation";
+@import "./components/_footer";
+@import "./components/_films_card";
+@import "./components/_skeleton";
+
+@import "./pages/home/_homepage";
+@import "./pages/home/_films";
+
+@import "./pages/about/_about";
+
+@import "./pages/film/_film";
+
+@import "./pages/planets/_planets";
