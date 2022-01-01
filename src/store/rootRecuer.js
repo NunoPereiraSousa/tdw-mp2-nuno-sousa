@@ -6,7 +6,7 @@ import planetsReducer from "./slice/planetSlice";
 const rootReducer = combineReducers({
   films: filmsReducer,
   film: filmReducer,
-  planets: planetsReducer
+  planets: planetsReducer,
 });
 
 export default rootReducer;

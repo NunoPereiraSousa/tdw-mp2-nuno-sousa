@@ -7,7 +7,7 @@ export default class Component {
   constructor() {
     this.selector;
     this.selectorChildren = {
-      animationsParagraphs: "[data-animation='paragraph']"
+      animationsParagraphs: "[data-animation='paragraph']",
     };
 
     console.log("component");
@@ -51,9 +51,9 @@ export default class Component {
     // Titles.
     this.animationsParagraphs = map(
       this.mapValidator(this.elements.animationsParagraphs),
-      element => {
+      (element) => {
         return new Paragraph({
-          element
+          element,
         });
       }
     );
@@ -62,7 +62,7 @@ export default class Component {
   }
 
   onResize() {
-    each(this.animations, animation => animation.onResize());
+    each(this.animations, (animation) => animation.onResize());
   }
 
   convertToArrayIfSingleElement(element) {
@@ -80,7 +80,7 @@ export default class Component {
 
     let sum = 0;
     if (array.length > 1) {
-      map(array, _ => sum++);
+      map(array, (_) => sum++);
     }
     return sum;
   }

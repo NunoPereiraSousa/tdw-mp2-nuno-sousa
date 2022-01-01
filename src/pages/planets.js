@@ -9,9 +9,9 @@ import Subheader from "../components/headers/subheader";
 import PlanetsSkeleton from "../components/loading/PlanetsSkeleton";
 import PlanetsCardWrapper from "../components/planets/PlanetsCardWrapper";
 
-const Planets = _ => {
+const Planets = (_) => {
   const dispatch = useDispatch();
-  const { planets } = useSelector(state => state, shallowEqual);
+  const { planets } = useSelector((state) => state, shallowEqual);
 
   const loading = planets.loading;
   const data = planets.planets;
@@ -20,15 +20,15 @@ const Planets = _ => {
     dispatch(getPlanets());
   }, []);
 
-  const html = _ => {
+  const html = (_) => {
     if (loading === "rejected") return "Error!";
     if (loading === "pending") {
-      return [1, 2, 3, 4, 5, 6, 7, 8, 9].map(item => (
+      return [1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => (
         <PlanetsSkeleton key={item} />
       ));
     }
     if (loading === "fulfilled") {
-      return data.map(planet => (
+      return data.map((planet) => (
         <PlanetsCardWrapper
           key={planet.name}
           name={planet.name}

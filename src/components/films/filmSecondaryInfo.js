@@ -6,8 +6,8 @@ import { getPlanet } from "../../store/slice/planetSlice";
 const FilmSecondaryInfo = ({ data, header }) => {
   const [id, setId] = useState([]);
 
-  const fetchPlanetsURLs = planets => {
-    planets.forEach(url => {
+  const fetchPlanetsURLs = (planets) => {
+    planets.forEach((url) => {
       getIdFromURL(url);
 
       // axios
@@ -24,7 +24,7 @@ const FilmSecondaryInfo = ({ data, header }) => {
   fetchPlanetsURLs(data);
 
   const dispatch = useDispatch();
-  const { planet } = useSelector(state => state, shallowEqual);
+  const { planet } = useSelector((state) => state, shallowEqual);
 
   useEffect(() => {
     dispatch(getPlanet());

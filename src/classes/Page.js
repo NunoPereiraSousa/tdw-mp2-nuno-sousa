@@ -18,7 +18,7 @@ export default class Page {
       animationsFadeIn: "[data-animation='fadeIn']",
       animationsFadeInText: "[data-animation='fadeInText']",
       animationsLetterReveal: "[data-animation='letterReveal']",
-      animationsFadeInRight: "[data-animation='fadeInRight']"
+      animationsFadeInRight: "[data-animation='fadeInRight']",
     };
   }
 
@@ -65,9 +65,9 @@ export default class Page {
 
     this.animationsFadeIn = map(
       this.mapValidator(this.elements.animationsFadeIn),
-      element => {
+      (element) => {
         return new FadeIn({
-          element
+          element,
         });
       }
     );
@@ -76,9 +76,9 @@ export default class Page {
 
     this.animationsFadeInText = map(
       this.mapValidator(this.elements.animationsFadeInText),
-      element => {
+      (element) => {
         return new FadeInText({
-          element
+          element,
         });
       }
     );
@@ -98,9 +98,9 @@ export default class Page {
 
     this.animationsFadeInRight = map(
       this.mapValidator(this.elements.animationsFadeInRight),
-      element => {
+      (element) => {
         return new FadeInRight({
-          element
+          element,
         });
       }
     );
@@ -109,7 +109,7 @@ export default class Page {
   }
 
   onResize() {
-    each(this.animations, animation => animation.onResize());
+    each(this.animations, (animation) => animation.onResize());
   }
 
   convertToArrayIfSingleElement(element) {
@@ -127,7 +127,7 @@ export default class Page {
 
     let sum = 0;
     if (array.length > 1) {
-      map(array, _ => sum++);
+      map(array, (_) => sum++);
     }
     return sum;
   }

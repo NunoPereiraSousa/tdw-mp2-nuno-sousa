@@ -1,11 +1,11 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const getPlanetsInfo = async _ => {
+const getPlanetsInfo = async (_) => {
   const response = await axios
     .get("https://swapi.dev/api/planets/")
-    .then(res => res.data.results)
-    .catch(err => err);
+    .then((res) => res.data.results)
+    .catch((err) => err);
 
   return response;
 };
@@ -17,16 +17,16 @@ export const planetsSlice = createSlice({
   name: "planets",
   initialState: {
     planets: [],
-    loading: "idle"
+    loading: "idle",
   },
   reducers: {},
   extraReducers: {
-    [getPlanets.pending]: state => {
+    [getPlanets.pending]: (state) => {
       // console.log("loading");
 
       state.loading = "pending";
     },
-    [getPlanets.rejected]: state => {
+    [getPlanets.rejected]: (state) => {
       // console.log("rejected");
 
       state.loading = "rejected";
@@ -36,8 +36,8 @@ export const planetsSlice = createSlice({
 
       state.loading = "fulfilled";
       state.planets = payload;
-    }
-  }
+    },
+  },
 });
 
 export default planetsSlice.reducer;
