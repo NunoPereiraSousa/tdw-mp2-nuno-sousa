@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const Navigation = _ => {
+const Navigation = (_) => {
   return (
     <nav className="navigation">
       <div className="navigation__wrapper">

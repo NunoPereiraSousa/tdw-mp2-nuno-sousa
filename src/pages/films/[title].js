@@ -11,12 +11,12 @@ import Footer from "../../components/footer/footer";
 import FilmDetailsCard from "../../components/films/FilmDetailsCard";
 import FilmSecondaryInfo from "../../components/films/filmSecondaryInfo";
 
-const FilmDetails = _ => {
+const FilmDetails = (_) => {
   const router = useRouter();
   const id = router.query.title;
 
   const dispatch = useDispatch();
-  const { film } = useSelector(state => state, shallowEqual);
+  const { film } = useSelector((state) => state, shallowEqual);
 
   const loading = film.loading;
   const data = film.film;

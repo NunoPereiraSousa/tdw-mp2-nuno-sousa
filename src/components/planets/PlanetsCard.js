@@ -8,62 +8,62 @@ const PlanetsCard = ({
   gravity,
   terrain,
   surfaceWater,
-  population
+  population,
 }) => {
-  const setHeader = _ => {
+  const setHeader = (_) => {
     switch (type) {
       case "name":
         return {
           header: "Name",
-          value: name
+          value: name,
         };
 
       case "rotationPeriod":
         return {
           header: "Rotation Period",
-          value: rotationPeriod
+          value: rotationPeriod,
         };
 
       case "orbitalPeriod":
         return {
           header: "Orbital Period",
-          value: orbitalPeriod
+          value: orbitalPeriod,
         };
 
       case "diameter":
         return {
           header: "Diameter",
-          value: diameter
+          value: diameter,
         };
 
       case "climate":
         return {
           header: "Climate",
-          value: climate
+          value: climate,
         };
 
       case "gravity":
         return {
           header: "Gravity",
-          value: gravity
+          value: gravity,
         };
 
       case "terrain":
         return {
           header: "Terrain",
-          value: terrain
+          value: terrain,
         };
 
       case "surfaceWater":
         return {
           header: "Surface Water",
-          value: surfaceWater
+          value: surfaceWater,
         };
 
       case "population":
         return {
           header: "Population",
-          value: population
+          value: population,
         };
 
       default:

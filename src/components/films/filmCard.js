@@ -10,20 +10,20 @@ const FilmCard = ({ id, title, date, director, producer }) => {
   const card = useRef(null);
   const [mousePosition, setMousePosition] = useState({
     x: 0,
-    y: 0
+    y: 0,
   });
 
-  const onMouseEnterHandler = _ => {};
+  const onMouseEnterHandler = (_) => {};
 
-  const onMouseMoveHandler = e => {};
+  const onMouseMoveHandler = (e) => {};
 
-  const ouMouseLeaveHandler = e => {};
+  const ouMouseLeaveHandler = (e) => {};
 
   return (
     <Link
       href={{
         pathname: ROUTE_FILM_ID,
-        query: { id: id }
+        query: { id: id },
       }}
     >
       <div

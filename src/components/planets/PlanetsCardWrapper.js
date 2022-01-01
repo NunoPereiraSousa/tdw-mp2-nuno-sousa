@@ -9,7 +9,7 @@ const PlanetsCardWrapper = ({
   gravity,
   terrain,
   surfaceWater,
-  population
+  population,
 }) => {
   return (
     <div className="planets__grid__wrapper">

@@ -1,4 +1,4 @@
-const Footer = _ => {
+const Footer = (_) => {
   return (
     <footer className="footer">
       <a href="https://nunops.com/" className="footer__author">

@@ -3,7 +3,7 @@ import Header from "../components/headers/header";
 import Subheader from "../components/headers/subheader";
 import Footer from "../components/footer/footer";
 
-const About = _ => {
+const About = (_) => {
   return (
     <>
       <Navigation />

@@ -1,11 +1,11 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const getFilms = async id => {
+const getFilms = async (id) => {
   const response = await axios
     .get(`https://swapi.dev/api/films/${id}`)
-    .then(res => res.data)
-    .catch(err => err);
+    .then((res) => res.data)
+    .catch((err) => err);
 
   return response;
 };
@@ -17,16 +17,16 @@ export const filmSlice = createSlice({
   name: "film",
   initialState: {
     film: [],
-    loading: "idle"
+    loading: "idle",
   },
   reducers: {},
   extraReducers: {
-    [getFilm.pending]: state => {
+    [getFilm.pending]: (state) => {
       // console.log("loading");
 
       state.loading = "pending";
     },
-    [getFilm.rejected]: state => {
+    [getFilm.rejected]: (state) => {
       // console.log("rejected");
 
       state.loading = "rejected";
@@ -36,8 +36,8 @@ export const filmSlice = createSlice({
 
       state.loading = "fulfilled";
       state.film = payload;
-    }
-  }
+    },
+  },
 });
 
 export default filmSlice.reducer;

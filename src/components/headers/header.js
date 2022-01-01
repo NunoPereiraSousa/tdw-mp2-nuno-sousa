@@ -12,13 +12,13 @@ const Header = ({ title }) => {
   //   console.log(spans);
   // }
 
-  const marquee = _ => {
+  const marquee = (_) => {
     gsap
       .to(spans.current, {
         xPercent: -100,
         repeat: -1,
         duration: 8,
-        ease: "linear"
+        ease: "linear",
       })
       .totalProgress(0.5);
 
@@ -34,7 +34,7 @@ const Header = ({ title }) => {
       {arr.map((span, index) => (
         <span
           key={span}
-          ref={element => {
+          ref={(element) => {
             spans.current[index] = element;
           }}
         >

@@ -4,7 +4,7 @@ const FilmDetailsCard = ({
   director,
   planets,
   vehicles,
-  species
+  species,
 }) => {
   const validateIfProducerExists = (producer, planets) => {
     if (producer) {
@@ -16,13 +16,13 @@ const FilmDetailsCard = ({
     } else if (planets) {
       return (
         <p className="film__details__card__label">
-          <span>Planets: </span> {planets.map(planet => planet)}
+          <span>Planets: </span> {planets.map((planet) => planet)}
         </p>
       );
     } else if (vehicles) {
       return (
         <p className="film__details__card__label">
-          <span>Vehicles: </span> {vehicles.map(vehicle => vehicle)}
+          <span>Vehicles: </span> {vehicles.map((vehicle) => vehicle)}
         </p>
       );
     }

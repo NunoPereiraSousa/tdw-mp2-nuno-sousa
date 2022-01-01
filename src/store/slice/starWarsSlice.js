@@ -4,8 +4,8 @@ import axios from "axios";
 const getFilms = async () => {
   const response = await axios
     .get("https://swapi.dev/api/films/")
-    .then(res => res.data.results)
-    .catch(err => err);
+    .then((res) => res.data.results)
+    .catch((err) => err);
 
   return response;
 };
@@ -17,16 +17,16 @@ export const filmsSlice = createSlice({
   name: "films",
   initialState: {
     films: [],
-    loading: "idle"
+    loading: "idle",
   },
   reducers: {},
   extraReducers: {
-    [getAllFilms.pending]: state => {
+    [getAllFilms.pending]: (state) => {
       // console.log("loading");
 
       state.loading = "pending";
     },
-    [getAllFilms.rejected]: state => {
+    [getAllFilms.rejected]: (state) => {
       // console.log("rejected");
 
       state.loading = "rejected";
@@ -36,8 +36,8 @@ export const filmsSlice = createSlice({
 
       state.loading = "fulfilled";
       state.films = payload;
-    }
-  }
+    },
+  },
 });
 
 export default filmsSlice.reducer;

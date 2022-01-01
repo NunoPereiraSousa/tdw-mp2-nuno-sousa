@@ -51,23 +51,23 @@ export default function Home() {
   // if (error) return "Error!";
 
   const dispatch = useDispatch();
-  const { films } = useSelector(state => state, shallowEqual);
+  const { films } = useSelector((state) => state, shallowEqual);
 
   console.log(films);
   useEffect(() => {
     dispatch(getAllFilms());
   }, []);
 
-  const html = _ => {
+  const html = (_) => {
     if (films.loading === "rejected") return "Error!";
     if (films.loading === "pending") {
-      return [1, 2, 3, 4, 5, 6].map(item => <SkeletonLoading key={item} />);
+      return [1, 2, 3, 4, 5, 6].map((item) => <SkeletonLoading key={item} />);
     }
     if (films.loading === "fulfilled") {
       return films.films
-        .filter(item => item.episode_id)
+        .filter((item) => item.episode_id)
         .sort((prev, next) => prev.episode_id - next.episode_id)
-        .map(film => (
+        .map((film) => (
           <FilmsCard
             key={film.episode_id}
             id={film.episode_id}

@@ -5,7 +5,7 @@ export function split({ element, expression = " ", append = true }) {
 
   let innerHTML = "";
 
-  each(words, line => {
+  each(words, (line) => {
     if (line.indexOf("<br>") > -1) {
       const lines = line.split("<br>");
 
@@ -22,7 +22,7 @@ export function split({ element, expression = " ", append = true }) {
   const spans = element.querySelectorAll("span");
 
   if (append) {
-    each(spans, span => {
+    each(spans, (span) => {
       const isSingleLetter = span.textContent.length === 1;
       const isNotEmpty = span.innerHTML.trim() !== "";
       const isNotAndCharacter = span.textContent !== "&";
@@ -87,7 +87,7 @@ function splitText(text, expression) {
 
     const innerHTML = [];
 
-    each(words, word => {
+    each(words, (word) => {
       if (!isLink && (word.includes("<a") || word.includes("<strong"))) {
         link = "";
 

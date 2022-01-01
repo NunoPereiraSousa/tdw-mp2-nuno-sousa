@@ -1,33 +1,33 @@
-import Component from './Component.js'
+import Component from "./Component.js";
 
 export default class Animation extends Component {
-  constructor ({ element, elements }) {
+  constructor({ element, elements }) {
     super({
       element,
-      elements
-    })
+      elements,
+    });
 
-    this.createObserver()
+    this.createObserver();
   }
 
-  createObserver () {
+  createObserver() {
     this.observer = new window.IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          this.animateIn()
+          this.animateIn();
 
-          observer.unobserve(entry.target)
+          observer.unobserve(entry.target);
         }
         // else {
         //   this.animateOut();
         // }
-      })
-    })
+      });
+    });
 
     if (this.element != null || this.element != undefined) {
-      this.observer.observe(this.element)
+      this.observer.observe(this.element);
     }
   }
 
-  onResize () {}
+  onResize() {}
 }
