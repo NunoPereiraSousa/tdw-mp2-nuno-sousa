@@ -25,26 +25,26 @@ jobs:
       # - run:
       #     name: Jest tests
       #     command: npm run jest
-      # - run:
-      #     name: Build
-      #     command: npm run build
+      - run:
+          name: Build
+          command: npm run build
       # - run:
       #     name: Deploy
       #     command: npx netlify-cli deploy --site "$NETLIFY_API_ID" --auth "$NETLIFY_ACCESS_TOKEN" --prod
 
-# workflows:
-#   version: 2
-#   commit:
-#     jobs:
-#       - build
-#   nightly:
-#     triggers:
-#       - schedule:
-#           cron: "0 0 * * *"
-#           filters:
-#             branches:
-#               only:
-#                 - circleci-project-setup
-#     jobs:
-#       - build
+workflows:
+  version: 2
+  commit:
+    jobs:
+      - build
+  nightly:
+    triggers:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+                - circleci-project-setup
+    jobs:
+      - build
                 
