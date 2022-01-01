@@ -1,5 +1,3 @@
-console.clear();
-
 const FilmDetailsCard = ({
   producer,
   date,
