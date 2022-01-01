@@ -64,16 +64,19 @@ export default function Home() {
       return [1, 2, 3, 4, 5, 6].map(item => <SkeletonLoading key={item} />);
     }
     if (films.loading === "fulfilled") {
-      return films.films.map(film => (
-        <FilmsCard
-          key={film.episode_id}
-          id={film.episode_id}
-          title={film.title}
-          date={film.release_date}
-          director={film.director}
-          producer={film.producer}
-        />
-      ));
+      return films.films
+        .filter(item => item.episode_id)
+        .sort((prev, next) => prev.episode_id - next.episode_id)
+        .map(film => (
+          <FilmsCard
+            key={film.episode_id}
+            id={film.episode_id}
+            title={film.title}
+            date={film.release_date}
+            director={film.director}
+            producer={film.producer}
+          />
+        ));
     }
   };
 

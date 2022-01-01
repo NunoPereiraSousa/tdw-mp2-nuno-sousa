@@ -6,12 +6,9 @@ import { getPlanet } from "../../store/slice/planetSlice";
 const FilmSecondaryInfo = ({ data, header }) => {
   const [id, setId] = useState([]);
 
-  console.log(data);
-
   const fetchPlanetsURLs = planets => {
     planets.forEach(url => {
       getIdFromURL(url);
-      console.log(url);
 
       // axios
       //   .get(url)
